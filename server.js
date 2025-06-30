@@ -14,7 +14,10 @@ app.use(cors({
 }));
 app.use(express.json());
 
-const redisClient = createClient({ url: 'redis://localhost:6379' });
+const redisClient = createClient({
+  url: process.env.UPSTASH_REDIS_URL
+});
+
 redisClient.on('error', (err) => console.log('Redis Client Error', err));
 (async () => {
   try {
