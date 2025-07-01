@@ -8,7 +8,10 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://leetcode-visualizer-zeta.vercel.app'
+  ],  
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
