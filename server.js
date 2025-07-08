@@ -10,8 +10,9 @@ const port = 3000;
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://leetcode-visualizer-zeta.vercel.app'
-  ],  
+    'https://leetcode-visualizer-zeta.vercel.app',
+    'https://leetcode-visualizer-9e31tutli-kavyas-projects-5daf2b37.vercel.app' // Add this!
+  ], 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
